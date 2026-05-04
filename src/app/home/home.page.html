@@ -1,0 +1,150 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>💰 Harcama Takip</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- harcamaEkleme -->
+  <ion-card class="form-card">
+    <ion-card-header>
+      <ion-card-title>Yeni Harcama Ekle</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-item lines="full" class="form-item">
+        <ion-label position="stacked">Harcama Adı</ion-label>
+        <ion-input
+          [(ngModel)]="yeniAd"
+          placeholder="Örn: Kahve, Market..."
+          [clearInput]="true">
+        </ion-input>
+      </ion-item>
+
+      <ion-item lines="full" class="form-item">
+        <ion-label position="stacked">Tutar (₺)</ion-label>
+        <ion-input
+          [(ngModel)]="yeniTutar"
+          type="number"
+          placeholder="0.00"
+          min="0">
+        </ion-input>
+      </ion-item>
+
+      <ion-item lines="full" class="form-item">
+        <ion-label position="stacked">Kategori</ion-label>
+        <ion-select
+          [(ngModel)]="secilenKategori"
+          placeholder="Seçiniz"
+          interface="popover">
+          <ion-select-option
+            *ngFor="let kat of kategoriler"
+            [value]="kat.deger">
+            {{ kat.icon }} {{ kat.ad }}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item lines="full" class="form-item">
+        <ion-label position="stacked">Tarih</ion-label>
+        <ion-datetime
+          [(ngModel)]="yeniTarih"
+          presentation="date"
+          [max]="bugun">
+        </ion-datetime>
+      </ion-item>
+
+      <ion-button
+        expand="block"
+        class="ekle-btn ion-margin-top"
+        (click)="harcamaEkle()">
+        <ion-icon name="add-circle-outline" slot="start"></ion-icon>
+        Ekle
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+  <!-- altKart -->
+  <ion-card class="ozet-card">
+    <ion-card-content>
+      <div class="ozet-row">
+        <div class="ozet-item">
+          <span class="ozet-label">Toplam Harcama</span>
+          <span class="ozet-deger toplam">{{ toplamHarcama() | number:'1.2-2' }} ₺</span>
+        </div>
+        <div class="ozet-item">
+          <span class="ozet-label">Kayıt Sayısı</span>
+          <span class="ozet-deger">{{ harcamalar.length }}</span>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- katogoriFiltre -->
+  <div class="filtre-bar ion-margin-bottom">
+    <ion-button
+      size="small"
+      [fill]="aktifFiltre === '' ? 'solid' : 'outline'"
+      class="filtre-btn"
+      (click)="filtreAyarla('')">
+      Tümü
+    </ion-button>
+    <ion-button
+      *ngFor="let kat of kategoriler"
+      size="small"
+      [fill]="aktifFiltre === kat.deger ? 'solid' : 'outline'"
+      class="filtre-btn"
+      (click)="filtreAyarla(kat.deger)">
+      {{ kat.icon }}
+    </ion-button>
+  </div>
+
+  <!-- harcamaListesi -->
+  <ion-list *ngIf="filtreliHarcamalar().length > 0" class="liste">
+    <ion-item-sliding
+      #slidingItem
+      *ngFor="let harcama of filtreliHarcamalar()">
+
+      <ion-item class="harcama-item" [class]="'harcama-item sol-' + kategoriRenkKodu(harcama.kategori)">
+        <ion-label>
+          <h2>
+            <span class="kat-icon">{{ kategoriIcon(harcama.kategori) }}</span>
+            {{ harcama.ad }}
+          </h2>
+          <p>
+            <ion-badge [color]="kategoriRenkKodu(harcama.kategori)">
+              {{ harcama.kategori }}
+            </ion-badge>
+            &nbsp;
+            <ion-icon name="calendar-outline" size="small"></ion-icon>
+            {{ harcama.tarih | date:'dd.MM.yyyy' }}
+          </p>
+        </ion-label>
+        <ion-note slot="end" class="tutar-note">
+          {{ harcama.tutar | number:'1.2-2' }} ₺
+        </ion-note>
+      </ion-item>
+
+      <!-- silmeButonu -->
+      <ion-item-options side="end">
+        <ion-item-option
+          color="danger"
+          expandable
+          (click)="harcamaSil(harcama.id, slidingItem)">
+          <ion-icon name="trash-outline" slot="top"></ion-icon>
+          Sil
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+
+  <!-- boşDurum -->
+  <div *ngIf="filtreliHarcamalar().length === 0" class="bos-durum">
+    <ion-icon name="wallet-outline"></ion-icon>
+    <p>Henüz harcama eklenmedi.</p>
+  </div>
+
+</ion-content>
