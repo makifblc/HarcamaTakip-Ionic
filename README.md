@@ -52,7 +52,7 @@ Harcama Girişi: Form yapısı ve takvim kullanımı.
 Liste Ekranı: Dinamik toplam tutar ve kategorize edilmiş harcamalar.
 
 İşlem Akışı: Silme onayı ve başarılı işlem bildirimleri.
-
+ <br><br><br>
 ⚙️ Kurulum ve Çalıştırma
 Projeyi yerel ortamınızda ayağa kaldırmak için:
 
