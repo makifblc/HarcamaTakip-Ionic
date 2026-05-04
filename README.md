@@ -34,12 +34,15 @@ Veri Sunumu: ion-card, ion-list, ion-item, ion-item-sliding, ion-item-options.
 Projenin arayüz akışını aşağıdaki görseller üzerinden inceleyebilirsiniz:
 <br><br><br>
 <img src="image/app_main.png" width="20%" alt="app">
+<br>
 <img src="image/ekleme_blip.png" width="20%" alt="ekleme_blip">
 <br>
 <img src="image/harcama.png" width="20%" alt="harcama">
+<br>
 <img src="image/silme.png" width="20%" alt="silme">
 <br>
 <img src="image/silme_slide.png" width="20%" alt="silme_slide">
+<br>
 <img src="image/total_harcama_kayıt.png" width="20%" alt="total_harcama_kayıt">
 <br>
 <img src="image/veri_ekleme.png" width="20%" alt="veri_ekleme">
