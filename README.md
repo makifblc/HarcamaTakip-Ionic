@@ -1,7 +1,7 @@
 # HarcamaTakip-Ionic
 İonic ile geliştirilen bir harcama takip uygulaması.
 
-💰 Ionic Harcama Takip Uygulaması (Expense Tracker)
+💰 Ionic Harcama Takip Uygulaması\
 
 📑 Proje Senaryosu ve Amaç
 Projenin temel amacı, mobil arayüz geliştirme, TypeScript ile veri yönetimi ve LocalStorage kullanarak veri kalıcılığı sağlama konularında yetkinlik kazanmaktır. Uygulama üzerinden harcama eklenebilir, listelenebilir, dinamik olarak toplam tutar görülebilir ve sliding (kaydırma) yöntemiyle kayıtlar silinebilir.
@@ -64,5 +64,5 @@ Geliştirme sunucusunu başlatın:
 
 Bash
 ionic serve
+
 Geliştirici: Mehmet Akif Balcı
-Teknolojiler: Ionic 7+, Angular, TypeScript, SCSS
