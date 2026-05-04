@@ -33,13 +33,13 @@ Veri Sunumu: ion-card, ion-list, ion-item, ion-item-sliding, ion-item-options.
 📸 Uygulama Görüntüleri
 Projenin arayüz akışını aşağıdaki görseller üzerinden inceleyebilirsiniz:
 <br><br><br>
-<img src="image/app_main.png" width="10%" alt="app">
-<img src="image/ekleme_blip.png" width="10%" alt="ekleme_blip">
-<img src="image/harcama.png" width="10%" alt="harcama">
-<img src="image/silme.png" width="10%" alt="silme">
-<img src="image/silme_slide.png" width="10%" alt="silme_slide">
-<img src="image/total_harcama_kayıt.png" width="10%" alt="total_harcama_kayıt">
-<img src="image/veri_ekleme.png" width="10%" alt="veri_ekleme">
+<img src="image/app_main.png" width="20%" alt="app">
+<img src="image/ekleme_blip.png" width="20%" alt="ekleme_blip">
+<img src="image/harcama.png" width="20%" alt="harcama">
+<img src="image/silme.png" width="20%" alt="silme">
+<img src="image/silme_slide.png" width="20%" alt="silme_slide">
+<img src="image/total_harcama_kayıt.png" width="20%" alt="total_harcama_kayıt">
+<img src="image/veri_ekleme.png" width="20%" alt="veri_ekleme">
 <br><br><br>
 Harcama Girişi: Form yapısı ve takvim kullanımı.
 
