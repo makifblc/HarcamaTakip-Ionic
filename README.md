@@ -64,5 +64,5 @@ Geliştirme sunucusunu başlatın:
 
 Bash
 ionic serve
-
+<br><br><br>
 Geliştirici: Mehmet Akif Balcı
