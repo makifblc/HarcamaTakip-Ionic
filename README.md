@@ -32,14 +32,15 @@ Veri Sunumu: ion-card, ion-list, ion-item, ion-item-sliding, ion-item-options.
 
 📸 Uygulama Görüntüleri
 Projenin arayüz akışını aşağıdaki görseller üzerinden inceleyebilirsiniz:
-
-<img src="image/app_main.png" width="30%" alt="app">
-<img src="image/ekleme_blip.png" width="30%" alt="ekleme_blip">
-<img src="image/harcama.png" width="30%" alt="harcama">
-<img src="image/silme.png" width="30%" alt="silme">
-<img src="image/silme_slide.png" width="30%" alt="silme_slide">
-<img src="image/total_harcama_kayıt.png" width="30%" alt="total_harcama_kayıt">
-<img src="image/veri_ekleme.png" width="30%" alt="veri_ekleme">
+<br><br><br>
+<img src="image/app_main.png" width="10%" alt="app">
+<img src="image/ekleme_blip.png" width="10%" alt="ekleme_blip">
+<img src="image/harcama.png" width="10%" alt="harcama">
+<img src="image/silme.png" width="10%" alt="silme">
+<img src="image/silme_slide.png" width="10%" alt="silme_slide">
+<img src="image/total_harcama_kayıt.png" width="10%" alt="total_harcama_kayıt">
+<img src="image/veri_ekleme.png" width="10%" alt="veri_ekleme">
+<br><br><br>
 Harcama Girişi: Form yapısı ve takvim kullanımı.
 
 Liste Ekranı: Dinamik toplam tutar ve kategorize edilmiş harcamalar.
